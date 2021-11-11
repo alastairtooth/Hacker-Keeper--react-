@@ -1,16 +1,34 @@
-import React from "react";
-import Footer from './Footer';
-import Header from './Header';
-import Note from './Note';
+import React, { useState } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import Note from "./Note";
+import CreateArea from "./CreateArea";
+import { createNotEmittedStatement } from "typescript";
 
 function App() {
-    return (
-        <div>
-            <Header />
-            <Note />
-            <Footer />
-        </div>
-    );
+
+  const [notes, setNotes] = useState([]);
+
+  function addNote(note) {
+    setNotes(prevNotes => {
+      return [...prevNotes, note];
+    });
+  }
+
+  function deleteNote(id) {
+
+  }
+
+  return (
+    <div>
+      <Header />
+      <CreateArea onAdd={addNote} />
+      {notes.map((noteItem, index) => {
+        return <Note title={noteItem.title} content={noteItem.content} />
+      })}
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
