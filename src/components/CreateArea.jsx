@@ -23,6 +23,10 @@ function CreateArea(props) {
     // component, which we can then access (as per the below), which we then pass the note into so it can be processed as though it were a variable
     // on the app page itself.
     props.onAdd(note);
+    setNote({
+      title: "",
+      content: "",
+    });
     event.preventDefault();
   }
 

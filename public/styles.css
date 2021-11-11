@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  background-color: #f5ba13;
+  background-color: #000000;
   margin: auto -16px;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -63,11 +63,11 @@ footer p {
 .note button {
   position: relative;
   float: right;
-  margin-right: 10px;
-  color: #f5ba13;
+  background-color: #3EC1D3;
+  color: #FFFFFF;
   border: none;
-  width: 36px;
-  height: 36px;
+  border-radius: 5px;
+  padding: 5px 10px;
   cursor: pointer;
   outline: none;
 }
@@ -96,7 +96,7 @@ form button {
   position: absolute;
   right: 18px;
   bottom: -18px;
-  background: #f5ba13;
+  background: #FF165D;
   color: #fff;
   border: none;
   border-radius: 50%;
