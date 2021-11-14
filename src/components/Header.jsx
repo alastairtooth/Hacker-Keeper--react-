@@ -1,9 +1,13 @@
 import React from "react";
+import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 
 function Header() {
   return (
     <header>
-      <h1>Hacker-Keeper</h1>
+      <h1>
+        <ImportantDevicesIcon />
+        Hacker-Keeper
+      </h1>
     </header>
   );
 }
