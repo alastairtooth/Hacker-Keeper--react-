@@ -5,7 +5,7 @@ import Zoom from "@mui/material/Zoom";
 
 function CreateArea(props) {
 
-  const [isExpanded, setExpanded] = useState(false);
+  const [isExpanded, setisExpanded] = useState(false)
 
   const [note, setNote] = useState({
     title: "",
@@ -36,31 +36,29 @@ function CreateArea(props) {
   }
 
   function expand() {
-    setExpanded(true)
+    setisExpanded(true)
   }
-
 
   return (
     <div>
       <form className="create-note">
-        {isExpanded ? (
+        {isExpanded &&
           <input
             onChange={handleChange}
             name="title"
             placeholder="Title"
             value={note.title}
           />
-        ) : null}
+        }
         <textarea
+          onClick={expand}
           onChange={handleChange}
           name="content"
           placeholder="Take a note..."
           rows={isExpanded ? "3" : "1"}
           value={note.content}
-          onClick={expand}
         />
-
-        <Zoom in={isExpanded ? true : false}>
+        <Zoom in={isExpanded}>
           <Fab onClick={submitNote}>
             <AddIcon />
           </Fab>
