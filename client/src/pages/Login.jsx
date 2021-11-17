@@ -1,4 +1,5 @@
 import { useState } from 'react'
+// import LogPage from './components/Login'
 
 function App() {
   const [email, setEmail] = useState('');
@@ -35,13 +36,13 @@ function App() {
           onChange={(e) => setEmail(e.target.value)}
           type="email"
           placeholder="Email"
-          />
+        />
         <input
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           type="password"
           placeholder="Password"
-          />
+        />
         <input type="submit" value="login" />
       </form>
     </div>
